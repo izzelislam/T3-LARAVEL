@@ -22,3 +22,5 @@ Route::group(["prefix"=>"/menu"], function(){
 	Route::view("/news","Menu.News");
 	Route::get("/rtn","MenuController@index");
 });
+
+Route::get("/asli/{pos}",'PostController@pos');
