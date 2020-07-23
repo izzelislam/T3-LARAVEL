@@ -14,3 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/Anggota','AnggotaController@index');
+Route::get('/Anggota/create','AnggotaController@create');
+Route::post('/Anggota/store','AnggotaController@store');
