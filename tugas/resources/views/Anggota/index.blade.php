@@ -34,8 +34,12 @@
             <td>{{$ang->email}}</td>
             <td>{{$ang->alamat}}</td>
             <td>
-              <a href="" class="badge badge-primary">Edit</a>
-              <a href="" class="badge badge-danger">Delete</a>
+              <a href="/Anggota/edit/{{$ang->id}}" class="btn btn-primary btn-sm">Edit</a>
+              <form method="POST" action="/Anggota/delete/{{$ang->id}}">
+                @csrf
+                @method('DELETE')
+                  <button  class="btn btn-danger btn-sm">Hapus</button>
+              </form>
             </td>
           </tr>
           @endforeach

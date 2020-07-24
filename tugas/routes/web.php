@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/Anggota','AnggotaController@index');
 Route::get('/Anggota/create','AnggotaController@create');
 Route::post('/Anggota/store','AnggotaController@store');
+Route::get('/Anggota/edit/{id}','AnggotaController@edit');
+Route::put('/Anggota/update/{id}','AnggotaController@update');
+Route::delete('/Anggota/delete/{id}','AnggotaController@delete');

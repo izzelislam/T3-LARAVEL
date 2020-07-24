@@ -29,7 +29,14 @@
 					<td>{{$guardian->birth_date}}</td>
 					<td>{{$guardian->address}}</td>
 					<td>{{$guardian->is_parent ? 'kandung':'angkat'}}</td>
-					<td><a href="">Edit</a><br><a href="">Hapus</a></td>
+					<td>
+						<button><a href="/guardians/edit/{{$guardian->id}}">Edit</a><br></button>
+						<form action="/guardians/delete/{{$guardian->id}}" method="POST">
+							@csrf
+							@method('DELETE')
+							<button>Hapus</button>
+						</form>
+					</td>
 				</tr>
 			@endforeach
 		</tbody>

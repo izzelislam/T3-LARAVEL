@@ -13,7 +13,7 @@
 				<td> <input type="text" name="name" placeholder="nama"></td>
 			</tr>
 			<tr>
-				<td>nama :</td>
+				<td>nik :</td>
 				<td> <input type="number" name="nik" placeholder="nik"></td>
 			</tr>
 			<tr>

@@ -32,4 +32,29 @@ class AnggotaController extends Controller
    	 return redirect('/Anggota');
 
    }
+
+   public function edit($id)
+   {
+      $anggota=Anggota::find($id);
+      return view('Anggota.edit',compact('anggota'));
+   }
+
+   public function update(Request $request,$id)
+   {
+      $anggota=Anggota::find($id);
+      $anggota->nama=$request->nama;
+      $anggota->no_anggota=$request->no_anggota;
+      $anggota->email=$request->email;
+      $anggota->alamat=$request->alamat;
+
+      $anggota->save();
+
+      return redirect('/Anggota');
+   }
+
+   public function delete($id)
+   {
+      Anggota::find($id)->delete();
+      return redirect('/Anggota');
+   }
 }
