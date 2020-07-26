@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+@extends('layout.app')
+@section('title','Guardian')
+@section('content')
 	<h1>Data Wali</h1>
 	<a href="/guardians/create">tambah data</a>
 	<table border="1" style="width: 100%">
@@ -16,6 +13,7 @@
 				<th>Tangagal Lahir</th>
 				<th>Alamat</th>
 				<th>Orang Tua Kandung</th>
+				<th>students</th>
 				<th>Action</th>
 			</tr>
 		</thead>
@@ -25,10 +23,11 @@
 					<td>{{$guardian->name}}</td>
 					<td>{{$guardian->nik}}</td>
 					<td>{{$guardian->phone}}</td>
-					<td>{{ ($guardian->gender =='l') ? 'laki-laki' : 'perempuan'}}</td>
+					<td>{{($guardian->gender =='l') ? 'laki-laki' : 'perempuan'}}</td>
 					<td>{{$guardian->birth_date}}</td>
 					<td>{{$guardian->address}}</td>
 					<td>{{$guardian->is_parent ? 'kandung':'angkat'}}</td>
+					<td>{{$guardian->Students()->count()}}</td>
 					<td>
 						<button><a href="/guardians/edit/{{$guardian->id}}">Edit</a><br></button>
 						<form action="/guardians/delete/{{$guardian->id}}" method="POST">
@@ -41,5 +40,4 @@
 			@endforeach
 		</tbody>
 	</table>
-</body>
-</html>
+@endsection

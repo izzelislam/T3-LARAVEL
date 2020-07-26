@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>crete </title>
-</head>
-<body>
+@extends('layout.app')
+@section('title','Guardian')
+@section('content')
 	<h1>insert data</h1>
 	<form method="POST" action="/guardians/update/{{$guardian->id}}">
 		@csrf
@@ -47,5 +44,4 @@
 			</tr>
 		</table>
 	</form>
-</body>
-</html>
+@endsection
