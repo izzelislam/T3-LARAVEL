@@ -51,3 +51,8 @@ Route::post('/Pengembalian/store','PengembalianController@store');
 Route::get('/Pengembalian/edit/{id}','PengembalianController@edit');
 Route::put('/Pengembalian/update/{id}','PengembalianController@update');
 Route::delete('/Pengembalian/delete/{id}','PengembalianController@delete');
+
+Route::get('/login','AuthController@login');
+Route::post('/login-proses','AuthController@loginProses');
+Route::get('/daftar','AuthController@daftar');
+Route::post('/daftar-proses','AuthController@daftarProses');

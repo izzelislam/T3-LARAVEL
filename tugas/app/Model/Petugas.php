@@ -8,4 +8,9 @@ class Petugas extends Model
 {
     protected $tabble='petugas';
     protected $fillable=['nama','no_petugas','email','alamat'];
+
+    public function Peminjaman()
+    {
+    	return $this->hasMany('App\Model\Peminjaman');
+    }
 }

@@ -11,6 +11,7 @@ class StudentController extends Controller
 {
     function __construct()
     {
+        $this->middleware('auth');
         $this->model=new student();
     }
 

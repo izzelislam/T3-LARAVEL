@@ -9,6 +9,7 @@ class GuardianController extends Controller
 {
     function __construct()
     {
+        $this->middleware('auth');
         $this->model=new Guardian();
     }
 
