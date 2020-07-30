@@ -56,3 +56,4 @@ Route::get('/login','AuthController@login');
 Route::post('/login-proses','AuthController@loginProses');
 Route::get('/daftar','AuthController@daftar');
 Route::post('/daftar-proses','AuthController@daftarProses');
+Route::get('/keluar','AuthController@keluar');

@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('guest')->except('keluar');
+        $this->middleware('auth')->only('keluar');
+    }
     public function login()
     {
     	return view('Auth.login');
@@ -36,7 +41,13 @@ class AuthController extends Controller
     	$request->merge(['password'=>$enkrip]);
 
     	User::create($request->all());
-    	return redirect('login');
+    	return redirect('/login');
 
+    }
+
+    public function keluar()
+    {
+        Auth::logout();
+        return redirect('/login');
     }
 }
