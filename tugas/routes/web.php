@@ -14,15 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/Anggota','AnggotaController@index');
-Route::get('/Anggota/create','AnggotaController@create');
-Route::post('/Anggota/store','AnggotaController@store');
-Route::get('/Anggota/edit/{id}','AnggotaController@edit');
-Route::put('/Anggota/update/{id}','AnggotaController@update');
-Route::delete('/Anggota/delete/{id}','AnggotaController@delete');
+Route::get('/Anggota/create','AnggotaController@create')->name('create');
+Route::post('/Anggota/store','AnggotaController@store')->name('store');
+Route::get('/Anggota/edit/{id}','AnggotaController@edit')->name('edit');
+Route::put('/Anggota/update/{id}','AnggotaController@update')->name('update');
+Route::delete('/Anggota/delete/{id}','AnggotaController@delete')->name('delete');
 
 Route::get('/Buku','BukuController@index');
-Route::get('/Buku/create','BukuController@create');
-Route::post('/Buku/store','BukuController@store');
+Route::get('/Buku/create','BukuController@create')->name('bukuCreate');
+Route::post('/Buku/store','BukuController@store')->name('bukuStore');
 Route::get('/Buku/edit/{id}','BukuController@edit');
 Route::put('/Buku/update/{id}','BukuController@update');
 Route::delete('/Buku/delete/{id}','BukuController@delete');
@@ -32,8 +32,8 @@ route::get('/',function(){
 });
 
 Route::get('/Petugas','PetugasController@index');
-Route::get('/Petugas/create','PetugasController@create');
-Route::post('/Petugas/store','PetugasController@store');
+Route::get('/Petugas/create','PetugasController@create')->name('petugasCreate');
+Route::post('/Petugas/store','PetugasController@store')->name('petugasStore');
 Route::get('/Petugas/edit/{id}','PetugasController@edit');
 Route::put('/Petugas/update/{id}','PetugasController@update');
 Route::delete('/Petugas/delete/{id}','PetugasController@delete');

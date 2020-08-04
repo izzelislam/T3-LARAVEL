@@ -29,7 +29,7 @@ class PetugasController extends Controller
     {
     	 $request->validate([
     	 	'nama'=>'required',
-    	 	'no_petugas'=>'required |size:5',
+    	 	'no_petugas'=>'required |size:8',
     	 	'email'=>'required',
     	 	'alamat'=>'required'
     	 ]);

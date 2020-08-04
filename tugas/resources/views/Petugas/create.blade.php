@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
       <h1 class="my-3" >Masukkan Data Petugas</h1>
-      <form method="POST" action="/Petugas/store">
+      <form method="POST" action="{{ route('petugasStore') }}">
         @csrf
         <div class="form-group">
           <label for="exampleFormControlInput1">Nama </label>

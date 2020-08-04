@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
       <h1 class="my-3" >Update Data Anggota</h1>
-      <form method="POST" action="/Anggota/update/{{$anggota->id}}">
+      <form method="POST" action="{{ route('update',['id'=>$anggota->id]) }}">
         @csrf
         @method('PUT')
         <div class="form-group">

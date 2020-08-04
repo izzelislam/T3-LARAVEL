@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
       <h1 class="center">Daftar Anggota</h1>
-      <a href="/Anggota/create" class="btn btn-dark mb-3">tambah data</a>
+      <a href="{{ route('create') }}" class="btn btn-dark mb-3">tambah data</a>
         <table class="table">
         <thead class="thead-dark">
           <tr>
@@ -24,8 +24,8 @@
             <td>{{$ang->email}}</td>
             <td>{{$ang->alamat}}</td>
             <td>
-              <a href="/Anggota/edit/{{$ang->id}}" class="btn btn-primary btn-sm">Edit</a>
-              <form method="POST" action="/Anggota/delete/{{$ang->id}}">
+              <a href="{{route('edit',['id'=>$ang->id])}}" class="btn btn-primary btn-sm">Edit</a>
+              <form method="POST" action="{{route('delete',['id'=>$ang->id])}}">
                 @csrf
                 @method('DELETE')
                   <button  class="btn btn-danger btn-sm">Hapus</button>

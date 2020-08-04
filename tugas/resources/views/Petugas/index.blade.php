@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
       <h1 class="center">Daftar Petugas</h1>
-      <a href="/Petugas/create" class="btn btn-dark mb-3">tambah data</a>
+      <a href="{{ route('petugasCreate') }}" class="btn btn-dark mb-3">tambah data</a>
         <table class="table">
         <thead class="thead-dark">
           <tr>
